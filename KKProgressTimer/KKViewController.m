@@ -33,6 +33,9 @@
     [self.view4 addSubview:timer4];
 
     timer1.delegate = self;
+    timer2.delegate = self;
+    timer1.tag = 1;
+    timer2.tag = 2;
 
     __block CGFloat i1 = 0;
     [timer1 startWithBlock:^CGFloat {
@@ -60,13 +63,23 @@
 
 #pragma mark KKProgressTimerDelegate Method
 - (void)didUpdateProgressTimer:(KKProgressTimer *)progressTimer percentage:(CGFloat)percentage {
-    if (percentage >= 1) {
-        [progressTimer stop];
+    switch (progressTimer.tag) {
+        case 1:
+            if (percentage >= 1) {
+                [progressTimer stop];
+            }
+            break;
+        case 2:
+            if (percentage >= .6) {
+                [progressTimer stop];
+            }
+        default:
+            break;
     }
 }
 
 - (void)didStopProgressTimer:(KKProgressTimer *)progressTimer percentage:(CGFloat)percentage {
-    NSLog(@"%s", __PRETTY_FUNCTION__);
+    NSLog(@"%s %f", __PRETTY_FUNCTION__, percentage);
 }
 
 @end
