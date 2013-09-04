@@ -45,12 +45,21 @@
 }
 
 - (void)updateProgress {
+    if ([self.delegate respondsToSelector:@selector(willUpdateProgressTimer:percentage:)]) {
+        [self.delegate willUpdateProgressTimer:self percentage:self.progress];
+    }
     self.progress = self.block();
     [self setNeedsDisplay];
+    if ([self.delegate respondsToSelector:@selector(didUpdateProgressTimer:percentage:)]) {
+        [self.delegate didUpdateProgressTimer:self percentage:self.progress];
+    }
 }
 
 - (void)stop {
     [self.timer invalidate];
+    if ([self.delegate respondsToSelector:@selector(didStopProgressTimer:percentage:)]) {
+        [self.delegate didStopProgressTimer:self percentage:self.progress];
+    }
     self.progress = 0;
     [self setNeedsDisplay];
 }
