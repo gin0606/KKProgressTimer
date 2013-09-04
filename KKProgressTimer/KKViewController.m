@@ -9,7 +9,7 @@
 #import "KKViewController.h"
 #import "KKProgressTimer.h"
 
-@interface KKViewController ()
+@interface KKViewController () <KKProgressTimerDelegate>
 @property (weak, nonatomic) IBOutlet UIView *view1;
 @property (weak, nonatomic) IBOutlet UIView *view2;
 @property (weak, nonatomic) IBOutlet UIView *view3;
@@ -31,6 +31,8 @@
     [self.view2 addSubview:timer2];
     [self.view3 addSubview:timer3];
     [self.view4 addSubview:timer4];
+
+    timer1.delegate = self;
 
     __block CGFloat i1 = 0;
     [timer1 startWithBlock:^CGFloat {
