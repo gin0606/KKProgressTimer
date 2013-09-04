@@ -22,15 +22,9 @@ typedef CGFloat (^KKProgressBlock)();
 
 @protocol KKProgressTimerDelegate
 @optional
-- (void)willStartProgressTimer:(KKProgressTimer *)progressTimer;
-
-- (void)didStartProgressTimer:(KKProgressTimer *)progressTimer;
-
 - (void)willUpdateProgressTimer:(KKProgressTimer *)progressTimer percentage:(CGFloat)percentage;
 
 - (void)didUpdateProgressTimer:(KKProgressTimer *)progressTimer percentage:(CGFloat)percentage;
-
-- (void)willStopProgressTimer:(KKProgressTimer *)progressTimer percentage:(CGFloat)percentage;
 
 - (void)didStopProgressTimer:(KKProgressTimer *)progressTimer percentage:(CGFloat)percentage;
 @end
