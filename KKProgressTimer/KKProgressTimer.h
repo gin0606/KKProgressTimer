@@ -8,10 +8,29 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol KKProgressTimerDelegate;
+
 typedef CGFloat (^KKProgressBlock)();
 
 @interface KKProgressTimer : UIView
+@property(nonatomic, weak) id <KKProgressTimerDelegate> delegate;
+
 - (void)startWithBlock:(KKProgressBlock)block;
 
 - (void)stop;
+@end
+
+@protocol KKProgressTimerDelegate
+@optional
+- (void)willStartProgressTimer:(KKProgressTimer *)progressTimer;
+
+- (void)didStartProgressTimer:(KKProgressTimer *)progressTimer;
+
+- (void)willUpdateProgressTimer:(KKProgressTimer *)progressTimer percentage:(CGFloat)percentage;
+
+- (void)didUpdateProgressTimer:(KKProgressTimer *)progressTimer percentage:(CGFloat)percentage;
+
+- (void)willStopProgressTimer:(KKProgressTimer *)progressTimer percentage:(CGFloat)percentage;
+
+- (void)didStopProgressTimer:(KKProgressTimer *)progressTimer percentage:(CGFloat)percentage;
 @end
