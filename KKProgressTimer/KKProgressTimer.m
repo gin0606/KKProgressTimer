@@ -8,6 +8,12 @@
 
 #import "KKProgressTimer.h"
 
+#define PI 3.14159265358979323846
+
+static inline float radians(double degrees) {
+    return (float) (degrees * PI / 180);
+}
+
 @interface KKProgressTimer ()
 @property(nonatomic, copy) KKProgressBlock block;
 @property(nonatomic, strong) NSTimer *timer;
@@ -15,6 +21,7 @@
 @property(nonatomic) CGFloat lineWidth;
 @property(nonatomic, strong) UIColor *circleBackgroundColor;
 @property(nonatomic, strong) UIColor *circleProgressBackgroundColor;
+@property(nonatomic) CGFloat frameWidth;
 @end
 
 @implementation KKProgressTimer
@@ -40,8 +47,14 @@
     self.backgroundColor = [UIColor clearColor];
 
     self.lineWidth = 5;
-    self.circleBackgroundColor = [UIColor lightGrayColor];
+    self.frameWidth = 5;
     self.circleProgressBackgroundColor = [UIColor cyanColor];
+    CGFloat red;
+    CGFloat green;
+    CGFloat blue;
+    [self.circleProgressBackgroundColor getRed:&red green:&green blue:&blue alpha:nil];
+    self.circleBackgroundColor = [UIColor colorWithRed:red green:green blue:blue alpha:0.3];
+
 }
 
 - (void)startWithBlock:(KKProgressBlock)block {
@@ -79,24 +92,32 @@
 
 #pragma mark draw progress
 - (void)drawRect:(CGRect)rect {
-    [self strokeCircleWithProgress:1.0 color:self.circleBackgroundColor lineWidth:self.lineWidth];
-    [self strokeCircleWithProgress:self.progress color:self.circleProgressBackgroundColor lineWidth:self.lineWidth];
+    [self drawFillPie:rect margin:0 color:[UIColor whiteColor] percentage:1];
+    [self drawFramePie:rect];
+    [self drawFillPie:rect margin:self.frameWidth color:self.circleBackgroundColor percentage:1];
+    [self drawFillPie:rect margin:self.frameWidth color:self.circleProgressBackgroundColor percentage:self.progress];
 }
 
-- (void)strokeCircleWithProgress:(CGFloat)progress color:(UIColor *)color lineWidth:(CGFloat)lineWidth {
-    UIBezierPath *bezierPath = [self bezierPathWithProgress:progress];
-    [color setStroke];
-    bezierPath.lineWidth = lineWidth;
-    [bezierPath stroke];
+- (void)drawFillPie:(CGRect)rect margin:(CGFloat)margin color:(UIColor *)color percentage:(CGFloat)percentage {
+    CGFloat radius = MIN(CGRectGetHeight(rect), CGRectGetWidth(rect)) * 0.5 - margin - 1;
+    CGFloat centerX = CGRectGetWidth(rect) * 0.5;
+    CGFloat centerY = CGRectGetHeight(rect) * 0.5;
+
+    CGContextRef cgContext = UIGraphicsGetCurrentContext();
+    CGContextSetFillColorWithColor(cgContext, [color CGColor]);
+    CGContextMoveToPoint(cgContext, centerX, centerY);
+    CGContextAddArc(cgContext, centerX, centerY, radius, (CGFloat) -M_PI_2, (CGFloat) (-M_PI_2 + M_PI * 2 * percentage), 0);
+    CGContextClosePath(cgContext);
+    CGContextFillPath(cgContext);
 }
 
-- (UIBezierPath *)bezierPathWithProgress:(CGFloat)progress {
-    CGFloat width = CGRectGetWidth(self.bounds);
-    CGFloat height = CGRectGetHeight(self.bounds);
-    return [UIBezierPath bezierPathWithArcCenter:CGPointMake(width / 2, height / 2)
-                                          radius:(MIN(width, height) - self.lineWidth) / 2
-                                      startAngle:(CGFloat) -M_PI_2
-                                        endAngle:(CGFloat) (-M_PI_2 + progress * 2 * M_PI) clockwise:YES];
+- (void)drawFramePie:(CGRect)rect {
+    [[UIColor lightGrayColor] set];
+    UIBezierPath *outsideFrame = [UIBezierPath bezierPathWithOvalInRect:rect];
+    [outsideFrame stroke];
+
+    UIBezierPath *insideFrame = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(rect.origin.x + self.frameWidth, rect.origin.y + self.frameWidth, rect.size.width - self.frameWidth * 2, rect.size.height - self.frameWidth * 2)];
+    [insideFrame stroke];
 }
 
 @end
