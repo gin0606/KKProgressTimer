@@ -58,4 +58,15 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark KKProgressTimerDelegate Method
+- (void)didUpdateProgressTimer:(KKProgressTimer *)progressTimer percentage:(CGFloat)percentage {
+    if (percentage >= 1) {
+        [progressTimer stop];
+    }
+}
+
+- (void)didStopProgressTimer:(KKProgressTimer *)progressTimer percentage:(CGFloat)percentage {
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+}
+
 @end
