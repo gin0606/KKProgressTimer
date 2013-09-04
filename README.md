@@ -1,0 +1,3 @@
+KKProgressTimer
+===============
+MIT LICENSE
