@@ -34,45 +34,45 @@
 				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">274</int>
 				<array class="NSMutableArray" key="NSSubviews">
-					<object class="IBUIView" id="992458411">
+					<object class="IBUIView" id="587905410">
 						<reference key="NSNextResponder" ref="774585933"/>
 						<int key="NSvFlags">274</int>
 						<string key="NSFrame">{{60, 20}, {200, 200}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="146287832"/>
+						<reference key="NSNextKeyView" ref="219356829"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
-						<object class="NSColor" key="IBUIBackgroundColor" id="18187506">
+						<object class="NSColor" key="IBUIBackgroundColor" id="715113976">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MCAwAA</bytes>
 						</object>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 					</object>
-					<object class="IBUIView" id="146287832">
+					<object class="IBUIView" id="219356829">
 						<reference key="NSNextResponder" ref="774585933"/>
 						<int key="NSvFlags">274</int>
 						<array class="NSMutableArray" key="NSSubviews"/>
 						<string key="NSFrame">{{110, 228}, {100, 100}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="462539110"/>
+						<reference key="NSNextKeyView" ref="1070499049"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
-						<reference key="IBUIBackgroundColor" ref="18187506"/>
+						<reference key="IBUIBackgroundColor" ref="715113976"/>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 					</object>
-					<object class="IBUIView" id="462539110">
+					<object class="IBUIView" id="1070499049">
 						<reference key="NSNextResponder" ref="774585933"/>
 						<int key="NSvFlags">274</int>
 						<array class="NSMutableArray" key="NSSubviews"/>
 						<string key="NSFrame">{{135, 336}, {50, 50}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="942672336"/>
+						<reference key="NSNextKeyView" ref="724577279"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
-						<reference key="IBUIBackgroundColor" ref="18187506"/>
+						<reference key="IBUIBackgroundColor" ref="715113976"/>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 					</object>
-					<object class="IBUIView" id="942672336">
+					<object class="IBUIView" id="724577279">
 						<reference key="NSNextResponder" ref="774585933"/>
 						<int key="NSvFlags">274</int>
 						<array class="NSMutableArray" key="NSSubviews"/>
@@ -81,14 +81,14 @@
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
-						<reference key="IBUIBackgroundColor" ref="18187506"/>
+						<reference key="IBUIBackgroundColor" ref="715113976"/>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 					</object>
 				</array>
 				<string key="NSFrame">{{0, 20}, {320, 460}}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
-				<reference key="NSNextKeyView" ref="992458411"/>
+				<reference key="NSNextKeyView" ref="587905410"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
 					<bytes key="NSWhite">MC43NQA</bytes>
@@ -130,17 +130,9 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">view1</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="992458411"/>
-					</object>
-					<int key="connectionID">126</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">view2</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="146287832"/>
+						<reference key="destination" ref="219356829"/>
 					</object>
 					<int key="connectionID">127</int>
 				</object>
@@ -148,7 +140,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">view3</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="462539110"/>
+						<reference key="destination" ref="1070499049"/>
 					</object>
 					<int key="connectionID">128</int>
 				</object>
@@ -156,9 +148,17 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">view4</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="942672336"/>
+						<reference key="destination" ref="724577279"/>
 					</object>
 					<int key="connectionID">129</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">timer1</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="587905410"/>
+					</object>
+					<int key="connectionID">130</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -184,32 +184,32 @@
 						<int key="objectID">6</int>
 						<reference key="object" ref="774585933"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="146287832"/>
-							<reference ref="462539110"/>
-							<reference ref="942672336"/>
-							<reference ref="992458411"/>
+							<reference ref="219356829"/>
+							<reference ref="1070499049"/>
+							<reference ref="724577279"/>
+							<reference ref="587905410"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">8</int>
-						<reference key="object" ref="992458411"/>
+						<reference key="object" ref="587905410"/>
 						<reference key="parent" ref="774585933"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">25</int>
-						<reference key="object" ref="146287832"/>
+						<reference key="object" ref="219356829"/>
 						<array class="NSMutableArray" key="children"/>
 						<reference key="parent" ref="774585933"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">87</int>
-						<reference key="object" ref="462539110"/>
+						<reference key="object" ref="1070499049"/>
 						<reference key="parent" ref="774585933"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">102</int>
-						<reference key="object" ref="942672336"/>
+						<reference key="object" ref="724577279"/>
 						<reference key="parent" ref="774585933"/>
 					</object>
 				</array>
@@ -222,6 +222,7 @@
 				<string key="102.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="25.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="6.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="8.CustomClassName">KKProgressTimer</string>
 				<string key="8.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="87.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 			</dictionary>
@@ -229,20 +230,33 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">129</int>
+			<int key="maxID">130</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
 				<object class="IBPartialClassDescription">
+					<string key="className">KKProgressTimer</string>
+					<string key="superclassName">UIView</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/KKProgressTimer.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
 					<string key="className">KKViewController</string>
 					<string key="superclassName">UIViewController</string>
 					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="timer1">KKProgressTimer</string>
 						<string key="view1">UIView</string>
 						<string key="view2">UIView</string>
 						<string key="view3">UIView</string>
 						<string key="view4">UIView</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="timer1">
+							<string key="name">timer1</string>
+							<string key="candidateClassName">KKProgressTimer</string>
+						</object>
 						<object class="IBToOneOutletInfo" key="view1">
 							<string key="name">view1</string>
 							<string key="candidateClassName">UIView</string>

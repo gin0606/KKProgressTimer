@@ -22,13 +22,26 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        self.backgroundColor = [UIColor clearColor];
-
-        self.lineWidth = 5;
-        self.circleBackgroundColor = [UIColor lightGrayColor];
-        self.circleProgressBackgroundColor = [UIColor cyanColor];
+        [self setupParams];
     }
     return self;
+}
+
+- (id)initWithCoder:(NSCoder *)coder {
+    self = [super initWithCoder:coder];
+    if (self) {
+        [self setupParams];
+    }
+
+    return self;
+}
+
+- (void)setupParams {
+    self.backgroundColor = [UIColor clearColor];
+
+    self.lineWidth = 5;
+    self.circleBackgroundColor = [UIColor lightGrayColor];
+    self.circleProgressBackgroundColor = [UIColor cyanColor];
 }
 
 - (void)startWithBlock:(KKProgressBlock)block {
