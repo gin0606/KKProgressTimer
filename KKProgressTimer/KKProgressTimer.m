@@ -55,6 +55,7 @@
     [self setNeedsDisplay];
 }
 
+#pragma mark draw progress
 - (void)drawRect:(CGRect)rect {
     [self strokeCircleWithProgress:1.0 color:self.circleBackgroundColor lineWidth:self.lineWidth];
     [self strokeCircleWithProgress:self.progress color:self.circleProgressBackgroundColor lineWidth:self.lineWidth];
