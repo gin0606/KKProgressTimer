@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface KKProgressTimer : UIView
+typedef CGFloat (^KKProgressBlock)();
 
+@interface KKProgressTimer : UIView
+- (void)startWithBlock:(KKProgressBlock)block;
+
+- (void)stop;
 @end

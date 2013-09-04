@@ -31,6 +31,23 @@
     [self.view2 addSubview:timer2];
     [self.view3 addSubview:timer3];
     [self.view4 addSubview:timer4];
+
+    __block CGFloat i1 = 0;
+    [timer1 startWithBlock:^CGFloat {
+        return i1++ / 100;
+    }];
+    __block CGFloat i2 = 0;
+    [timer2 startWithBlock:^CGFloat {
+        return ((i2++ >= 100) ? (i2 = 0) : i2) / 100;
+    }];
+    __block CGFloat i3 = 0;
+    [timer3 startWithBlock:^CGFloat {
+        return ((i3++ >= 50) ? (i3 = 0) : i3) / 50;
+    }];
+    __block CGFloat i4 = 0;
+    [timer4 startWithBlock:^CGFloat {
+        return ((i4++ >= 10) ? (i4 = 0) : i4) / 10;
+    }];
 }
 
 - (void)didReceiveMemoryWarning
