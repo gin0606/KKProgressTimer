@@ -12,7 +12,7 @@
 @property(nonatomic, copy) KKProgressBlock block;
 @property(nonatomic, strong) NSTimer *timer;
 @property(nonatomic) CGFloat progress;
-@property(nonatomic) int lineWidth;
+@property(nonatomic) CGFloat lineWidth;
 @property(nonatomic, strong) UIColor *circleBackgroundColor;
 @property(nonatomic, strong) UIColor *circleProgressBackgroundColor;
 @end
