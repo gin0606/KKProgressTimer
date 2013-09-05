@@ -104,9 +104,6 @@
 
 - (void)drawFramePie:(CGRect)rect {
     [UIColorMake(120, 120, 120, 0.3) set];
-    UIBezierPath *outsideFrame = [UIBezierPath bezierPathWithOvalInRect:rect];
-    [outsideFrame stroke];
-
     UIBezierPath *insideFrame = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(rect.origin.x + self.frameWidth, rect.origin.y + self.frameWidth, rect.size.width - self.frameWidth * 2, rect.size.height - self.frameWidth * 2)];
     [insideFrame stroke];
 }
