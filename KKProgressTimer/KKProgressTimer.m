@@ -14,8 +14,8 @@
 @property(nonatomic, copy) KKProgressBlock block;
 @property(nonatomic, strong) NSTimer *timer;
 @property(nonatomic) CGFloat progress;
-@property(nonatomic, strong) UIColor *circleBackgroundColor;
-@property(nonatomic, strong) UIColor *circleProgressBackgroundColor;
+@property(nonatomic, strong) UIColor *progressBackgroundColor;
+@property(nonatomic, strong) UIColor *progressColor;
 @property(nonatomic) CGFloat frameWidth;
 @end
 
@@ -42,8 +42,8 @@
     self.backgroundColor = [UIColor clearColor];
 
     self.frameWidth = 5;
-    self.circleProgressBackgroundColor = UIColorMake(44, 103, 175, 1);
-    self.circleBackgroundColor = UIColorMake(190, 223, 244, 1);
+    self.progressColor = UIColorMake(44, 103, 175, 1);
+    self.progressBackgroundColor = UIColorMake(190, 223, 244, 1);
 
 }
 
@@ -84,8 +84,8 @@
 - (void)drawRect:(CGRect)rect {
     [self drawFillPie:rect margin:0 color:[UIColor whiteColor] percentage:1];
     [self drawFramePie:rect];
-    [self drawFillPie:rect margin:self.frameWidth color:self.circleBackgroundColor percentage:1];
-    [self drawFillPie:rect margin:self.frameWidth color:self.circleProgressBackgroundColor percentage:self.progress];
+    [self drawFillPie:rect margin:self.frameWidth color:self.progressBackgroundColor percentage:1];
+    [self drawFillPie:rect margin:self.frameWidth color:self.progressColor percentage:self.progress];
 }
 
 - (void)drawFillPie:(CGRect)rect margin:(CGFloat)margin color:(UIColor *)color percentage:(CGFloat)percentage {
