@@ -8,17 +8,10 @@
 
 #import "KKProgressTimer.h"
 
-#define PI 3.14159265358979323846
-
-static inline float radians(double degrees) {
-    return (float) (degrees * PI / 180);
-}
-
 @interface KKProgressTimer ()
 @property(nonatomic, copy) KKProgressBlock block;
 @property(nonatomic, strong) NSTimer *timer;
 @property(nonatomic) CGFloat progress;
-@property(nonatomic) CGFloat lineWidth;
 @property(nonatomic, strong) UIColor *circleBackgroundColor;
 @property(nonatomic, strong) UIColor *circleProgressBackgroundColor;
 @property(nonatomic) CGFloat frameWidth;
@@ -46,7 +39,6 @@ static inline float radians(double degrees) {
 - (void)setupParams {
     self.backgroundColor = [UIColor clearColor];
 
-    self.lineWidth = 5;
     self.frameWidth = 5;
     self.circleProgressBackgroundColor = [UIColor cyanColor];
     CGFloat red;
