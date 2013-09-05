@@ -12,9 +12,9 @@
 
 @interface KKProgressTimer ()
 @property(nonatomic) CGFloat frameWidth;
-@property(nonatomic, strong) UIColor *circleBackgroundColor;
 @property(nonatomic, strong) UIColor *progressColor;
 @property(nonatomic, strong) UIColor *progressBackgroundColor;
+@property(nonatomic, strong) UIColor *circleBackgroundColor;
 
 @property(nonatomic) CGFloat progress;
 @property(nonatomic, strong) NSTimer *timer;
@@ -44,10 +44,9 @@
     self.backgroundColor = [UIColor clearColor];
 
     self.frameWidth = 5;
-    self.circleBackgroundColor = [UIColor whiteColor];
     self.progressColor = UIColorMake(44, 103, 175, 1);
     self.progressBackgroundColor = UIColorMake(190, 223, 244, 1);
-
+    self.circleBackgroundColor = [UIColor whiteColor];
 }
 
 - (void)startWithBlock:(KKProgressBlock)block {
