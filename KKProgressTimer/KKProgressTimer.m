@@ -43,7 +43,7 @@
 - (void)setupParams {
     self.backgroundColor = [UIColor clearColor];
 
-    self.frameWidth = 5;
+    self.frameWidth = 3;
     self.progressColor = UIColorMake(44, 103, 175, 1);
     self.progressBackgroundColor = UIColorMake(190, 223, 244, 1);
     self.circleBackgroundColor = [UIColor whiteColor];
@@ -91,7 +91,7 @@
 }
 
 - (void)drawFillPie:(CGRect)rect margin:(CGFloat)margin color:(UIColor *)color percentage:(CGFloat)percentage {
-    CGFloat radius = MIN(CGRectGetHeight(rect), CGRectGetWidth(rect)) * 0.5 - margin - 1;
+    CGFloat radius = MIN(CGRectGetHeight(rect), CGRectGetWidth(rect)) * 0.5 - margin;
     CGFloat centerX = CGRectGetWidth(rect) * 0.5;
     CGFloat centerY = CGRectGetHeight(rect) * 0.5;
 
@@ -104,8 +104,15 @@
 }
 
 - (void)drawFramePie:(CGRect)rect {
-    [UIColorMake(120, 120, 120, 0.3) set];
-    UIBezierPath *insideFrame = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(rect.origin.x + self.frameWidth, rect.origin.y + self.frameWidth, rect.size.width - self.frameWidth * 2, rect.size.height - self.frameWidth * 2)];
+    [UIColorMake(155, 190, 225, 0.8) set];
+    CGFloat fw = self.frameWidth + 1;
+    CGRect frameRect = CGRectMake(
+            rect.origin.x + fw,
+            rect.origin.y + fw,
+            rect.size.width - fw * 2,
+            rect.size.height - fw * 2);
+    UIBezierPath *insideFrame = [UIBezierPath bezierPathWithOvalInRect:frameRect];
+    insideFrame.lineWidth = 2;
     [insideFrame stroke];
 }
 
