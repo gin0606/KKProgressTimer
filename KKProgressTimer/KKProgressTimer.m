@@ -8,6 +8,8 @@
 
 #import "KKProgressTimer.h"
 
+#define UIColorMake(r, g, b, a) [UIColor colorWithRed:r / 255. green:g / 255. blue:b / 255. alpha:a]
+
 @interface KKProgressTimer ()
 @property(nonatomic, copy) KKProgressBlock block;
 @property(nonatomic, strong) NSTimer *timer;
@@ -40,12 +42,8 @@
     self.backgroundColor = [UIColor clearColor];
 
     self.frameWidth = 5;
-    self.circleProgressBackgroundColor = [UIColor cyanColor];
-    CGFloat red;
-    CGFloat green;
-    CGFloat blue;
-    [self.circleProgressBackgroundColor getRed:&red green:&green blue:&blue alpha:nil];
-    self.circleBackgroundColor = [UIColor colorWithRed:red green:green blue:blue alpha:0.3];
+    self.circleProgressBackgroundColor = UIColorMake(44, 103, 175, 1);
+    self.circleBackgroundColor = UIColorMake(190, 223, 244, 1);
 
 }
 
