@@ -11,12 +11,13 @@
 #define UIColorMake(r, g, b, a) [UIColor colorWithRed:r / 255. green:g / 255. blue:b / 255. alpha:a]
 
 @interface KKProgressTimer ()
-@property(nonatomic, copy) KKProgressBlock block;
-@property(nonatomic, strong) NSTimer *timer;
-@property(nonatomic) CGFloat progress;
-@property(nonatomic, strong) UIColor *progressBackgroundColor;
-@property(nonatomic, strong) UIColor *progressColor;
 @property(nonatomic) CGFloat frameWidth;
+@property(nonatomic, strong) UIColor *progressColor;
+@property(nonatomic, strong) UIColor *progressBackgroundColor;
+
+@property(nonatomic) CGFloat progress;
+@property(nonatomic, strong) NSTimer *timer;
+@property(nonatomic, copy) KKProgressBlock block;
 @end
 
 @implementation KKProgressTimer
