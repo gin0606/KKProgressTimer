@@ -103,7 +103,7 @@
 }
 
 - (void)drawFramePie:(CGRect)rect {
-    [[UIColor lightGrayColor] set];
+    [UIColorMake(120, 120, 120, 0.3) set];
     UIBezierPath *outsideFrame = [UIBezierPath bezierPathWithOvalInRect:rect];
     [outsideFrame stroke];
 
