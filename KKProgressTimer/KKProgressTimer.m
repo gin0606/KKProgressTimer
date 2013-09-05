@@ -12,6 +12,7 @@
 
 @interface KKProgressTimer ()
 @property(nonatomic) CGFloat frameWidth;
+@property(nonatomic, strong) UIColor *circleBackgroundColor;
 @property(nonatomic, strong) UIColor *progressColor;
 @property(nonatomic, strong) UIColor *progressBackgroundColor;
 
@@ -43,6 +44,7 @@
     self.backgroundColor = [UIColor clearColor];
 
     self.frameWidth = 5;
+    self.circleBackgroundColor = [UIColor whiteColor];
     self.progressColor = UIColorMake(44, 103, 175, 1);
     self.progressBackgroundColor = UIColorMake(190, 223, 244, 1);
 
@@ -83,7 +85,7 @@
 
 #pragma mark draw progress
 - (void)drawRect:(CGRect)rect {
-    [self drawFillPie:rect margin:0 color:[UIColor whiteColor] percentage:1];
+    [self drawFillPie:rect margin:0 color:self.circleBackgroundColor percentage:1];
     [self drawFramePie:rect];
     [self drawFillPie:rect margin:self.frameWidth color:self.progressBackgroundColor percentage:1];
     [self drawFillPie:rect margin:self.frameWidth color:self.progressColor percentage:self.progress];
