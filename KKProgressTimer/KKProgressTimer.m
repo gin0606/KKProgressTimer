@@ -119,13 +119,17 @@
 }
 
 - (void)drawFramePie:(CGRect)rect {
+    CGFloat radius = MIN(CGRectGetHeight(rect), CGRectGetWidth(rect)) * 0.5;
+    CGFloat centerX = CGRectGetWidth(rect) * 0.5;
+    CGFloat centerY = CGRectGetHeight(rect) * 0.5;
+
     [UIColorMake(155, 190, 225, 0.8) set];
     CGFloat fw = self.frameWidth + 1;
     CGRect frameRect = CGRectMake(
-            rect.origin.x + fw,
-            rect.origin.y + fw,
-            rect.size.width - fw * 2,
-            rect.size.height - fw * 2);
+            centerX - radius + fw,
+            centerY - radius + fw,
+            (radius - fw) * 2,
+            (radius - fw) * 2);
     UIBezierPath *insideFrame = [UIBezierPath bezierPathWithOvalInRect:frameRect];
     insideFrame.lineWidth = 2;
     [insideFrame stroke];
