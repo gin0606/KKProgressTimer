@@ -1,5 +1,5 @@
 //
-// Prefix header for all source files of the 'KKProgressTimer' target in the 'KKProgressTimer' project
+// Prefix header for all source files of the 'KKProgressTimerDemo' target in the 'KKProgressTimerDemo' project
 //
 
 #import <Availability.h>

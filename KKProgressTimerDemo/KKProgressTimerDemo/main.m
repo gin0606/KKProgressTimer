@@ -1,8 +1,8 @@
 //
 //  main.m
-//  KKProgressTimer
+//  KKProgressTimerDemo
 //
-//  Created by gin0606 on 2013/09/04.
+//  Created by gin0606 on 2013/09/07.
 //  Copyright (c) 2013年 gin0606. All rights reserved.
 //
 

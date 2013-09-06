@@ -1,0 +1,321 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5CE13B5D17DA3337008832EA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CE13B5C17DA3337008832EA /* UIKit.framework */; };
+		5CE13B5F17DA3337008832EA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CE13B5E17DA3337008832EA /* Foundation.framework */; };
+		5CE13B6117DA3337008832EA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CE13B6017DA3337008832EA /* CoreGraphics.framework */; };
+		5CE13B6717DA3337008832EA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5CE13B6517DA3337008832EA /* InfoPlist.strings */; };
+		5CE13B6917DA3337008832EA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CE13B6817DA3337008832EA /* main.m */; };
+		5CE13B6D17DA3337008832EA /* KKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CE13B6C17DA3337008832EA /* KKAppDelegate.m */; };
+		5CE13B6F17DA3337008832EA /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CE13B6E17DA3337008832EA /* Default.png */; };
+		5CE13B7117DA3337008832EA /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CE13B7017DA3337008832EA /* Default@2x.png */; };
+		5CE13B7317DA3337008832EA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CE13B7217DA3337008832EA /* Default-568h@2x.png */; };
+		5CE13B7617DA3337008832EA /* KKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CE13B7517DA3337008832EA /* KKViewController.m */; };
+		5CE13B7917DA3337008832EA /* KKViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CE13B7717DA3337008832EA /* KKViewController.xib */; };
+		5CE13B8217DA33C7008832EA /* KKProgressTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CE13B8117DA33C7008832EA /* KKProgressTimer.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5CE13B5917DA3337008832EA /* KKProgressTimerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KKProgressTimerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CE13B5C17DA3337008832EA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5CE13B5E17DA3337008832EA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5CE13B6017DA3337008832EA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5CE13B6417DA3337008832EA /* KKProgressTimerDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KKProgressTimerDemo-Info.plist"; sourceTree = "<group>"; };
+		5CE13B6617DA3337008832EA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5CE13B6817DA3337008832EA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5CE13B6A17DA3337008832EA /* KKProgressTimerDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KKProgressTimerDemo-Prefix.pch"; sourceTree = "<group>"; };
+		5CE13B6B17DA3337008832EA /* KKAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKAppDelegate.h; sourceTree = "<group>"; };
+		5CE13B6C17DA3337008832EA /* KKAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKAppDelegate.m; sourceTree = "<group>"; };
+		5CE13B6E17DA3337008832EA /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		5CE13B7017DA3337008832EA /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		5CE13B7217DA3337008832EA /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		5CE13B7417DA3337008832EA /* KKViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKViewController.h; sourceTree = "<group>"; };
+		5CE13B7517DA3337008832EA /* KKViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKViewController.m; sourceTree = "<group>"; };
+		5CE13B7817DA3337008832EA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/KKViewController.xib; sourceTree = "<group>"; };
+		5CE13B8017DA33C7008832EA /* KKProgressTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKProgressTimer.h; sourceTree = "<group>"; };
+		5CE13B8117DA33C7008832EA /* KKProgressTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKProgressTimer.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5CE13B5617DA3337008832EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CE13B5D17DA3337008832EA /* UIKit.framework in Frameworks */,
+				5CE13B5F17DA3337008832EA /* Foundation.framework in Frameworks */,
+				5CE13B6117DA3337008832EA /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5CE13B5017DA3337008832EA = {
+			isa = PBXGroup;
+			children = (
+				5CE13B7F17DA33C7008832EA /* KKProgressTimer */,
+				5CE13B6217DA3337008832EA /* KKProgressTimerDemo */,
+				5CE13B5B17DA3337008832EA /* Frameworks */,
+				5CE13B5A17DA3337008832EA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5CE13B5A17DA3337008832EA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5CE13B5917DA3337008832EA /* KKProgressTimerDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5CE13B5B17DA3337008832EA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5CE13B5C17DA3337008832EA /* UIKit.framework */,
+				5CE13B5E17DA3337008832EA /* Foundation.framework */,
+				5CE13B6017DA3337008832EA /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5CE13B6217DA3337008832EA /* KKProgressTimerDemo */ = {
+			isa = PBXGroup;
+			children = (
+				5CE13B6B17DA3337008832EA /* KKAppDelegate.h */,
+				5CE13B6C17DA3337008832EA /* KKAppDelegate.m */,
+				5CE13B7417DA3337008832EA /* KKViewController.h */,
+				5CE13B7517DA3337008832EA /* KKViewController.m */,
+				5CE13B7717DA3337008832EA /* KKViewController.xib */,
+				5CE13B6317DA3337008832EA /* Supporting Files */,
+			);
+			path = KKProgressTimerDemo;
+			sourceTree = "<group>";
+		};
+		5CE13B6317DA3337008832EA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5CE13B6417DA3337008832EA /* KKProgressTimerDemo-Info.plist */,
+				5CE13B6517DA3337008832EA /* InfoPlist.strings */,
+				5CE13B6817DA3337008832EA /* main.m */,
+				5CE13B6A17DA3337008832EA /* KKProgressTimerDemo-Prefix.pch */,
+				5CE13B6E17DA3337008832EA /* Default.png */,
+				5CE13B7017DA3337008832EA /* Default@2x.png */,
+				5CE13B7217DA3337008832EA /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5CE13B7F17DA33C7008832EA /* KKProgressTimer */ = {
+			isa = PBXGroup;
+			children = (
+				5CE13B8017DA33C7008832EA /* KKProgressTimer.h */,
+				5CE13B8117DA33C7008832EA /* KKProgressTimer.m */,
+			);
+			name = KKProgressTimer;
+			path = ../KKProgressTimer;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5CE13B5817DA3337008832EA /* KKProgressTimerDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5CE13B7C17DA3337008832EA /* Build configuration list for PBXNativeTarget "KKProgressTimerDemo" */;
+			buildPhases = (
+				5CE13B5517DA3337008832EA /* Sources */,
+				5CE13B5617DA3337008832EA /* Frameworks */,
+				5CE13B5717DA3337008832EA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KKProgressTimerDemo;
+			productName = KKProgressTimerDemo;
+			productReference = 5CE13B5917DA3337008832EA /* KKProgressTimerDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5CE13B5117DA3337008832EA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = KK;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = gin0606;
+			};
+			buildConfigurationList = 5CE13B5417DA3337008832EA /* Build configuration list for PBXProject "KKProgressTimerDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5CE13B5017DA3337008832EA;
+			productRefGroup = 5CE13B5A17DA3337008832EA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5CE13B5817DA3337008832EA /* KKProgressTimerDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5CE13B5717DA3337008832EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CE13B6717DA3337008832EA /* InfoPlist.strings in Resources */,
+				5CE13B6F17DA3337008832EA /* Default.png in Resources */,
+				5CE13B7117DA3337008832EA /* Default@2x.png in Resources */,
+				5CE13B7317DA3337008832EA /* Default-568h@2x.png in Resources */,
+				5CE13B7917DA3337008832EA /* KKViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5CE13B5517DA3337008832EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CE13B6917DA3337008832EA /* main.m in Sources */,
+				5CE13B6D17DA3337008832EA /* KKAppDelegate.m in Sources */,
+				5CE13B7617DA3337008832EA /* KKViewController.m in Sources */,
+				5CE13B8217DA33C7008832EA /* KKProgressTimer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5CE13B6517DA3337008832EA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5CE13B6617DA3337008832EA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		5CE13B7717DA3337008832EA /* KKViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5CE13B7817DA3337008832EA /* en */,
+			);
+			name = KKViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5CE13B7A17DA3337008832EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5CE13B7B17DA3337008832EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5CE13B7D17DA3337008832EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KKProgressTimerDemo/KKProgressTimerDemo-Prefix.pch";
+				INFOPLIST_FILE = "KKProgressTimerDemo/KKProgressTimerDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5CE13B7E17DA3337008832EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KKProgressTimerDemo/KKProgressTimerDemo-Prefix.pch";
+				INFOPLIST_FILE = "KKProgressTimerDemo/KKProgressTimerDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5CE13B5417DA3337008832EA /* Build configuration list for PBXProject "KKProgressTimerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CE13B7A17DA3337008832EA /* Debug */,
+				5CE13B7B17DA3337008832EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5CE13B7C17DA3337008832EA /* Build configuration list for PBXNativeTarget "KKProgressTimerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CE13B7D17DA3337008832EA /* Debug */,
+				5CE13B7E17DA3337008832EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5CE13B5117DA3337008832EA /* Project object */;
+}
