@@ -64,7 +64,7 @@
 						<reference key="NSNextResponder" ref="774585933"/>
 						<int key="NSvFlags">274</int>
 						<array class="NSMutableArray" key="NSSubviews"/>
-						<string key="NSFrame">{{135, 336}, {50, 50}}</string>
+						<string key="NSFrame">{{20, 336}, {280, 50}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="724577279"/>
@@ -247,7 +247,6 @@
 					<string key="superclassName">UIViewController</string>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="timer1">KKProgressTimer</string>
-						<string key="view1">UIView</string>
 						<string key="view2">UIView</string>
 						<string key="view3">UIView</string>
 						<string key="view4">UIView</string>
@@ -256,10 +255,6 @@
 						<object class="IBToOneOutletInfo" key="timer1">
 							<string key="name">timer1</string>
 							<string key="candidateClassName">KKProgressTimer</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="view1">
-							<string key="name">view1</string>
-							<string key="candidateClassName">UIView</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="view2">
 							<string key="name">view2</string>
