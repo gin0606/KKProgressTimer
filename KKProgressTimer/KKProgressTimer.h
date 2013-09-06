@@ -15,6 +15,12 @@ typedef CGFloat (^KKProgressBlock)();
 @interface KKProgressTimer : UIView
 @property(nonatomic, weak) id <KKProgressTimerDelegate> delegate;
 
+@property(nonatomic) CGFloat frameWidth;
+@property(nonatomic, strong) UIColor *progressColor;
+@property(nonatomic, strong) UIColor *progressBackgroundColor;
+@property(nonatomic, strong) UIColor *circleBackgroundColor;
+
+
 - (void)startWithBlock:(KKProgressBlock)block;
 
 - (void)stop;
